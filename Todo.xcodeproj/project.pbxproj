@@ -18,6 +18,10 @@
 		C9DF16DB1F91C79700F368E6 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16DA1F91C79700F368E6 /* NibLoadable.swift */; };
 		C9DF16DD1F91C7BB00F368E6 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16DC1F91C7BB00F368E6 /* Reusable.swift */; };
 		C9DF16DF1F91C7D700F368E6 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16DE1F91C7D700F368E6 /* StoryboardInstantiable.swift */; };
+		C9DF16E21F91C8B600F368E6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16E11F91C8B600F368E6 /* HomeViewController.swift */; };
+		C9DF16E41F91C8D000F368E6 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DF16E31F91C8D000F368E6 /* HomeViewController.storyboard */; };
+		C9DF16E61F91C8EB00F368E6 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16E51F91C8EB00F368E6 /* TodoListViewController.swift */; };
+		C9DF16E81F91C90300F368E6 /* TodoListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DF16E71F91C90300F368E6 /* TodoListViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		C9DF16DA1F91C79700F368E6 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibLoadable.swift; path = Protocols/NibLoadable.swift; sourceTree = "<group>"; };
 		C9DF16DC1F91C7BB00F368E6 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = Protocols/Reusable.swift; sourceTree = "<group>"; };
 		C9DF16DE1F91C7D700F368E6 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardInstantiable.swift; path = Protocols/StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		C9DF16E11F91C8B600F368E6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Scenes/Home/HomeViewController.swift; sourceTree = "<group>"; };
+		C9DF16E31F91C8D000F368E6 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = HomeViewController.storyboard; path = Scenes/Home/HomeViewController.storyboard; sourceTree = "<group>"; };
+		C9DF16E51F91C8EB00F368E6 /* TodoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoListViewController.swift; path = Scenes/TodoList/TodoListViewController.swift; sourceTree = "<group>"; };
+		C9DF16E71F91C90300F368E6 /* TodoListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TodoListViewController.storyboard; path = Scenes/TodoList/TodoListViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +117,11 @@
 			children = (
 				C9DF16A81F91C00D00F368E6 /* AppDelegate.swift */,
 				C9DF16AA1F91C00D00F368E6 /* ViewController.swift */,
-				C9DF16E01F91C7F300F368E6 /* Protocol */,
+				C9DF16E01F91C7F300F368E6 /* Protocols */,
 				C9DF16AC1F91C00D00F368E6 /* Main.storyboard */,
 				C9DF16AF1F91C00D00F368E6 /* Assets.xcassets */,
 				C9DF16B11F91C00D00F368E6 /* LaunchScreen.storyboard */,
+				C9DF16EB1F91C92800F368E6 /* Scenes */,
 				C9DF16B41F91C00D00F368E6 /* Info.plist */,
 			);
 			path = Todo;
@@ -144,14 +153,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C9DF16E01F91C7F300F368E6 /* Protocol */ = {
+		C9DF16E01F91C7F300F368E6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				C9DF16DA1F91C79700F368E6 /* NibLoadable.swift */,
 				C9DF16DC1F91C7BB00F368E6 /* Reusable.swift */,
 				C9DF16DE1F91C7D700F368E6 /* StoryboardInstantiable.swift */,
 			);
-			name = Protocol;
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		C9DF16E91F91C90F00F368E6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF16E11F91C8B600F368E6 /* HomeViewController.swift */,
+				C9DF16E31F91C8D000F368E6 /* HomeViewController.storyboard */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		C9DF16EA1F91C91C00F368E6 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF16E51F91C8EB00F368E6 /* TodoListViewController.swift */,
+				C9DF16E71F91C90300F368E6 /* TodoListViewController.storyboard */,
+			);
+			name = TodoList;
+			sourceTree = "<group>";
+		};
+		C9DF16EB1F91C92800F368E6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF16E91F91C90F00F368E6 /* Home */,
+				C9DF16EA1F91C91C00F368E6 /* TodoList */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +301,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9DF16E41F91C8D000F368E6 /* HomeViewController.storyboard in Resources */,
 				C9DF16B31F91C00D00F368E6 /* LaunchScreen.storyboard in Resources */,
 				C9DF16B01F91C00D00F368E6 /* Assets.xcassets in Resources */,
+				C9DF16E81F91C90300F368E6 /* TodoListViewController.storyboard in Resources */,
 				C9DF16AE1F91C00D00F368E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,10 +348,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9DF16DD1F91C7BB00F368E6 /* Reusable.swift in Sources */,
+				C9DF16E61F91C8EB00F368E6 /* TodoListViewController.swift in Sources */,
 				C9DF16DB1F91C79700F368E6 /* NibLoadable.swift in Sources */,
 				C9DF16DF1F91C7D700F368E6 /* StoryboardInstantiable.swift in Sources */,
 				C9DF16AB1F91C00D00F368E6 /* ViewController.swift in Sources */,
 				C9DF16A91F91C00D00F368E6 /* AppDelegate.swift in Sources */,
+				C9DF16E21F91C8B600F368E6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
