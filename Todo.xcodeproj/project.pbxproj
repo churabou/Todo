@@ -14,6 +14,7 @@
 		C9DF16B31F91C00D00F368E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DF16B11F91C00D00F368E6 /* LaunchScreen.storyboard */; };
 		C9DF16BE1F91C00E00F368E6 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16BD1F91C00E00F368E6 /* TodoTests.swift */; };
 		C9DF16C91F91C00E00F368E6 /* TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16C81F91C00E00F368E6 /* TodoUITests.swift */; };
+		C9DF16D91F91C66700F368E6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF16D81F91C66700F368E6 /* RealmSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C9DF16C41F91C00E00F368E6 /* TodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DF16C81F91C00E00F368E6 /* TodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUITests.swift; sourceTree = "<group>"; };
 		C9DF16CA1F91C00E00F368E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9DF16D81F91C66700F368E6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9DF16D91F91C66700F368E6 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				C9DF16BC1F91C00E00F368E6 /* TodoTests */,
 				C9DF16C71F91C00E00F368E6 /* TodoUITests */,
 				C9DF16A61F91C00D00F368E6 /* Products */,
+				C9DF16D71F91C66700F368E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +129,14 @@
 			path = TodoUITests;
 			sourceTree = "<group>";
 		};
+		C9DF16D71F91C66700F368E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF16D81F91C66700F368E6 /* RealmSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +147,7 @@
 				C9DF16A11F91C00D00F368E6 /* Sources */,
 				C9DF16A21F91C00D00F368E6 /* Frameworks */,
 				C9DF16A31F91C00D00F368E6 /* Resources */,
+				C9DF16D61F91C5F900F368E6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,6 +269,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C9DF16D61F91C5F900F368E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C9DF16A11F91C00D00F368E6 /* Sources */ = {
@@ -416,6 +446,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = J5ZDJEZ5EU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Todo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -430,6 +464,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = J5ZDJEZ5EU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Todo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
