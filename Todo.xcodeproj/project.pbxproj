@@ -15,6 +15,9 @@
 		C9DF16BE1F91C00E00F368E6 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16BD1F91C00E00F368E6 /* TodoTests.swift */; };
 		C9DF16C91F91C00E00F368E6 /* TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16C81F91C00E00F368E6 /* TodoUITests.swift */; };
 		C9DF16D91F91C66700F368E6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF16D81F91C66700F368E6 /* RealmSwift.framework */; };
+		C9DF16DB1F91C79700F368E6 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16DA1F91C79700F368E6 /* NibLoadable.swift */; };
+		C9DF16DD1F91C7BB00F368E6 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16DC1F91C7BB00F368E6 /* Reusable.swift */; };
+		C9DF16DF1F91C7D700F368E6 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16DE1F91C7D700F368E6 /* StoryboardInstantiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		C9DF16C81F91C00E00F368E6 /* TodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUITests.swift; sourceTree = "<group>"; };
 		C9DF16CA1F91C00E00F368E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9DF16D81F91C66700F368E6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		C9DF16DA1F91C79700F368E6 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibLoadable.swift; path = Protocols/NibLoadable.swift; sourceTree = "<group>"; };
+		C9DF16DC1F91C7BB00F368E6 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = Protocols/Reusable.swift; sourceTree = "<group>"; };
+		C9DF16DE1F91C7D700F368E6 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardInstantiable.swift; path = Protocols/StoryboardInstantiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 			children = (
 				C9DF16A81F91C00D00F368E6 /* AppDelegate.swift */,
 				C9DF16AA1F91C00D00F368E6 /* ViewController.swift */,
+				C9DF16E01F91C7F300F368E6 /* Protocol */,
 				C9DF16AC1F91C00D00F368E6 /* Main.storyboard */,
 				C9DF16AF1F91C00D00F368E6 /* Assets.xcassets */,
 				C9DF16B11F91C00D00F368E6 /* LaunchScreen.storyboard */,
@@ -135,6 +142,16 @@
 				C9DF16D81F91C66700F368E6 /* RealmSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9DF16E01F91C7F300F368E6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF16DA1F91C79700F368E6 /* NibLoadable.swift */,
+				C9DF16DC1F91C7BB00F368E6 /* Reusable.swift */,
+				C9DF16DE1F91C7D700F368E6 /* StoryboardInstantiable.swift */,
+			);
+			name = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +309,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9DF16DD1F91C7BB00F368E6 /* Reusable.swift in Sources */,
+				C9DF16DB1F91C79700F368E6 /* NibLoadable.swift in Sources */,
+				C9DF16DF1F91C7D700F368E6 /* StoryboardInstantiable.swift in Sources */,
 				C9DF16AB1F91C00D00F368E6 /* ViewController.swift in Sources */,
 				C9DF16A91F91C00D00F368E6 /* AppDelegate.swift in Sources */,
 			);
