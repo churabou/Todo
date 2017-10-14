@@ -1,0 +1,10 @@
+build/
+DerivedData/
+.DS_Store
+
+# CocoaPod
+Pods/*
+
+#Carthage
+Carthage/Build
+
