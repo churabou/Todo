@@ -17,7 +17,6 @@
 		C9DF16B31F91C00D00F368E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DF16B11F91C00D00F368E6 /* LaunchScreen.storyboard */; };
 		C9DF16BE1F91C00E00F368E6 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16BD1F91C00E00F368E6 /* TodoTests.swift */; };
 		C9DF16C91F91C00E00F368E6 /* TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16C81F91C00E00F368E6 /* TodoUITests.swift */; };
-		C9DF16D91F91C66700F368E6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF16D81F91C66700F368E6 /* RealmSwift.framework */; };
 		C9DF16DB1F91C79700F368E6 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16DA1F91C79700F368E6 /* NibLoadable.swift */; };
 		C9DF16DD1F91C7BB00F368E6 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16DC1F91C7BB00F368E6 /* Reusable.swift */; };
 		C9DF16DF1F91C7D700F368E6 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16DE1F91C7D700F368E6 /* StoryboardInstantiable.swift */; };
@@ -25,6 +24,18 @@
 		C9DF16E41F91C8D000F368E6 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DF16E31F91C8D000F368E6 /* HomeViewController.storyboard */; };
 		C9DF16E61F91C8EB00F368E6 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF16E51F91C8EB00F368E6 /* TodoListViewController.swift */; };
 		C9DF16E81F91C90300F368E6 /* TodoListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DF16E71F91C90300F368E6 /* TodoListViewController.storyboard */; };
+		C9DF16FB1F91E9F100F368E6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF16F91F91E92300F368E6 /* Realm.framework */; };
+		C9DF16FC1F91E9F100F368E6 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF16F91F91E92300F368E6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9DF16FD1F91E9F100F368E6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF16D81F91C66700F368E6 /* RealmSwift.framework */; };
+		C9DF16FE1F91E9F100F368E6 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9DF16D81F91C66700F368E6 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9DF17001F9313A300F368E6 /* TodoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DF16FF1F9313A300F368E6 /* TodoListTableViewCell.xib */; };
+		C9DF17021F9313CD00F368E6 /* TodoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF17011F9313CD00F368E6 /* TodoListTableViewCell.swift */; };
+		C9DF17041F93146800F368E6 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF17031F93146800F368E6 /* UITableView+Extension.swift */; };
+		C9DF17081F9318C300F368E6 /* InputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DF17071F9318C300F368E6 /* InputView.xib */; };
+		C9DF170A1F9318E600F368E6 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF17091F9318E600F368E6 /* InputView.swift */; };
+		C9DF170D1F933E5000F368E6 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF170C1F933E5000F368E6 /* RealmModel.swift */; };
+		C9DF170F1F93A7EA00F368E6 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF170E1F93A7EA00F368E6 /* Todo.swift */; };
+		C9DF17111F93A84A00F368E6 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF17101F93A84A00F368E6 /* Categories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +54,21 @@
 			remoteInfo = Todo;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C9DF16F71F91E85E00F368E6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C9DF16FE1F91E9F100F368E6 /* RealmSwift.framework in Embed Frameworks */,
+				C9DF16FC1F91E9F100F368E6 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03AF0DBD695C944A23E56295 /* Pods-TodoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoUITests/Pods-TodoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +100,15 @@
 		C9DF16E31F91C8D000F368E6 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = HomeViewController.storyboard; path = Scenes/Home/HomeViewController.storyboard; sourceTree = "<group>"; };
 		C9DF16E51F91C8EB00F368E6 /* TodoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoListViewController.swift; path = Scenes/TodoList/TodoListViewController.swift; sourceTree = "<group>"; };
 		C9DF16E71F91C90300F368E6 /* TodoListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TodoListViewController.storyboard; path = Scenes/TodoList/TodoListViewController.storyboard; sourceTree = "<group>"; };
+		C9DF16F91F91E92300F368E6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		C9DF16FF1F9313A300F368E6 /* TodoListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TodoListTableViewCell.xib; path = Scenes/TodoList/TodoListTableViewCell.xib; sourceTree = "<group>"; };
+		C9DF17011F9313CD00F368E6 /* TodoListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoListTableViewCell.swift; path = Scenes/TodoList/TodoListTableViewCell.swift; sourceTree = "<group>"; };
+		C9DF17031F93146800F368E6 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Extension.swift"; path = "Extensions/UITableView+Extension.swift"; sourceTree = "<group>"; };
+		C9DF17071F9318C300F368E6 /* InputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InputView.xib; path = Scenes/Home/InputView.xib; sourceTree = "<group>"; };
+		C9DF17091F9318E600F368E6 /* InputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputView.swift; path = Scenes/Home/InputView.swift; sourceTree = "<group>"; };
+		C9DF170C1F933E5000F368E6 /* RealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmModel.swift; path = Manager/RealmModel.swift; sourceTree = "<group>"; };
+		C9DF170E1F93A7EA00F368E6 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Todo.swift; path = Objects/Todo.swift; sourceTree = "<group>"; };
+		C9DF17101F93A84A00F368E6 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categories.swift; path = Objects/Categories.swift; sourceTree = "<group>"; };
 		F8992D8E097AEED0C23904EC /* Pods_TodoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,7 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9DF16D91F91C66700F368E6 /* RealmSwift.framework in Frameworks */,
+				C9DF16FB1F91E9F100F368E6 /* Realm.framework in Frameworks */,
+				C9DF16FD1F91E9F100F368E6 /* RealmSwift.framework in Frameworks */,
 				866D4F927D0E8606B06C5A80 /* Pods_Todo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +182,9 @@
 			children = (
 				C9DF16A81F91C00D00F368E6 /* AppDelegate.swift */,
 				C9DF16AA1F91C00D00F368E6 /* ViewController.swift */,
+				C9DF17121F93A84F00F368E6 /* Object */,
+				C9DF170B1F933E3B00F368E6 /* Manager */,
+				C9DF17051F93151900F368E6 /* Extensions */,
 				C9DF16E01F91C7F300F368E6 /* Protocols */,
 				C9DF16AC1F91C00D00F368E6 /* Main.storyboard */,
 				C9DF16AF1F91C00D00F368E6 /* Assets.xcassets */,
@@ -177,6 +216,7 @@
 		C9DF16D71F91C66700F368E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9DF16F91F91E92300F368E6 /* Realm.framework */,
 				C9DF16D81F91C66700F368E6 /* RealmSwift.framework */,
 				65E4EC0BEE343D293A8E7C90 /* Pods_Todo.framework */,
 				145604524F6BE0C4E269F54A /* Pods_TodoTests.framework */,
@@ -199,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				C9DF16E11F91C8B600F368E6 /* HomeViewController.swift */,
+				C9DF17071F9318C300F368E6 /* InputView.xib */,
+				C9DF17091F9318E600F368E6 /* InputView.swift */,
 				C9DF16E31F91C8D000F368E6 /* HomeViewController.storyboard */,
 			);
 			name = Home;
@@ -209,6 +251,8 @@
 			children = (
 				C9DF16E51F91C8EB00F368E6 /* TodoListViewController.swift */,
 				C9DF16E71F91C90300F368E6 /* TodoListViewController.storyboard */,
+				C9DF17011F9313CD00F368E6 /* TodoListTableViewCell.swift */,
+				C9DF16FF1F9313A300F368E6 /* TodoListTableViewCell.xib */,
 			);
 			name = TodoList;
 			sourceTree = "<group>";
@@ -220,6 +264,31 @@
 				C9DF16EA1F91C91C00F368E6 /* TodoList */,
 			);
 			name = Scenes;
+			sourceTree = "<group>";
+		};
+		C9DF17051F93151900F368E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF17031F93146800F368E6 /* UITableView+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C9DF170B1F933E3B00F368E6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF170C1F933E5000F368E6 /* RealmModel.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		C9DF17121F93A84F00F368E6 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF170E1F93A7EA00F368E6 /* Todo.swift */,
+				C9DF17101F93A84A00F368E6 /* Categories.swift */,
+			);
+			name = Object;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +305,7 @@
 				C9DF16D61F91C5F900F368E6 /* ShellScript */,
 				4785660FAD9186AA1B332BAA /* [CP] Embed Pods Frameworks */,
 				4734F9BE3BF277D1C23278F7 /* [CP] Copy Pods Resources */,
+				C9DF16F71F91E85E00F368E6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -345,8 +415,10 @@
 				C9DF16E41F91C8D000F368E6 /* HomeViewController.storyboard in Resources */,
 				C9DF16B31F91C00D00F368E6 /* LaunchScreen.storyboard in Resources */,
 				C9DF16B01F91C00D00F368E6 /* Assets.xcassets in Resources */,
+				C9DF17001F9313A300F368E6 /* TodoListTableViewCell.xib in Resources */,
 				C9DF16E81F91C90300F368E6 /* TodoListViewController.storyboard in Resources */,
 				C9DF16AE1F91C00D00F368E6 /* Main.storyboard in Resources */,
+				C9DF17081F9318C300F368E6 /* InputView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +581,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 			);
 			outputPaths = (
 			);
@@ -525,11 +598,17 @@
 			files = (
 				C9DF16DD1F91C7BB00F368E6 /* Reusable.swift in Sources */,
 				C9DF16E61F91C8EB00F368E6 /* TodoListViewController.swift in Sources */,
+				C9DF17041F93146800F368E6 /* UITableView+Extension.swift in Sources */,
+				C9DF170D1F933E5000F368E6 /* RealmModel.swift in Sources */,
 				C9DF16DB1F91C79700F368E6 /* NibLoadable.swift in Sources */,
+				C9DF17021F9313CD00F368E6 /* TodoListTableViewCell.swift in Sources */,
 				C9DF16DF1F91C7D700F368E6 /* StoryboardInstantiable.swift in Sources */,
+				C9DF170F1F93A7EA00F368E6 /* Todo.swift in Sources */,
 				C9DF16AB1F91C00D00F368E6 /* ViewController.swift in Sources */,
+				C9DF170A1F9318E600F368E6 /* InputView.swift in Sources */,
 				C9DF16A91F91C00D00F368E6 /* AppDelegate.swift in Sources */,
 				C9DF16E21F91C8B600F368E6 /* HomeViewController.swift in Sources */,
+				C9DF17111F93A84A00F368E6 /* Categories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
