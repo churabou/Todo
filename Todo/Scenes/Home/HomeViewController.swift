@@ -11,19 +11,22 @@ import XLPagerTabStrip
 import RealmSwift
 
 class HomeViewController: ButtonBarPagerTabStripViewController {
-
+    
     
     var textView: InputView!
     
     override func viewDidLoad() {
-    
+        
+        let pink = UIColor(red: 1, green: 160/255, blue: 167/255, alpha: 1)
+        self.settings.style.buttonBarItemBackgroundColor = .white
+        self.settings.style.selectedBarBackgroundColor = pink
         super.viewDidLoad()
         
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             
-            oldCell?.label.textColor = UIColor(white: 1, alpha: 0.6)
-            newCell?.label.textColor = .white
+            oldCell?.label.textColor = UIColor(white: 0.6, alpha: 0.6)
+            newCell?.label.textColor = UIColor(white: 0.6, alpha: 1)
             
             if animated {
                 UIView.animate(withDuration: 0.1, animations: { () -> Void in
@@ -38,15 +41,15 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         }
         
         self.textView = InputView.instantiateFromNib()
-        self.textView.frame.size = CGSize(width: view.frame.width, height: 50)
+        self.textView.frame.size = CGSize(width: view.frame.width, height: 40)
         self.textView.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeShown), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         
-
+        
         // Do any additional setup after loading the view.
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -60,7 +63,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         self.categories.forEach { categoy in
             
             let child = TodoListViewController.instantiateFromStoryboard()
-            child.category = categoy
+            child.category = categoy.category_name
             childView.append(child)
         }
         
@@ -70,21 +73,58 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     
     //MARK: fileprivate
     
-    fileprivate var categories: [String] {
+    //    fileprivate var categories: [String] = ["todoA", "todoB", "todoC"]
+    
+    fileprivate var categories: Results<Category> {
         
-        return ["todoA", "todoB", "todoC"]
+        let realm = try! Realm()
+        return realm.objects(Category.self)
     }
     //MARK: private
     
     @IBAction dynamic private func button(_ sender: UIButton){
-    
+        
         self.textView.frame.origin = CGPoint(x: 0, y: view.frame.height)
         self.view.addSubview(textView)
         self.textView.textField.becomeFirstResponder()
-
+        
     }
     
-
+    @IBAction dynamic private func createNewTab(){
+        
+        self.showAVwithTextField()
+    }
+    
+    //コメントを入力するalertViewを表示する
+    
+    func showAVwithTextField(){
+        
+        let alert = UIAlertController(title: "新規タブ作成", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "作成", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction!) in
+            if let categoryName = alert.textFields?[0].text {
+                print(categoryName)
+                let category = Category(categoryName)
+                RealmModel.instance.write(category)
+                self.reloadPagerTabStripView()
+            }
+            
+        })
+        
+        
+        let cancel = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler: nil)
+        
+        alert.addAction(action)
+        alert.addAction(cancel)
+        alert.addTextField(configurationHandler: { (textField:UITextField) in
+            
+            textField.placeholder = "タブ名を入力"
+        })
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
     //キーボードが開くときの呼び出しメソッド
     func keyboardWillBeShown(notification:NSNotification) {
         
@@ -100,12 +140,12 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
 }
 
 extension HomeViewController: InputButtonTouchUpDelegate {
-
+    
     func touchUpInputButton(_ textField: UITextField, inputView: InputView) {
         
         if inputView.state == .write {
-        
-            let todo = Todo(self.categories[currentIndex] ,outline: textField.text!)
+            
+            let todo = Todo(self.categories[currentIndex].category_name ,outline: textField.text!)
             RealmModel.instance.write(todo)
             let todoListView = self.viewControllers[currentIndex] as! TodoListViewController
             todoListView.reloadData()
@@ -118,9 +158,9 @@ extension HomeViewController: InputButtonTouchUpDelegate {
 }
 
 extension HomeViewController: StoryboardInstantiable {
-
-    static var storyboardName: String {
     
+    static var storyboardName: String {
+        
         return String(describing: self)
     }
 }

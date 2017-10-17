@@ -42,7 +42,7 @@ class RealmModel {
     }
     
     func get() {
-    
+        
         
     }
     
@@ -52,5 +52,14 @@ class RealmModel {
         return realm.objects(Object.self)
     }
     
+    func createSampleData(){
+        
+        let categoryA = Category("todoA")
+        let categoryB = Category("todoB")
+        let categoryC = Category("todoC")
+        self.write(categoryA)
+        self.write(categoryB)
+        self.write(categoryC)
+    }
     
 }

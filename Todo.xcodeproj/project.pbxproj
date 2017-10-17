@@ -35,7 +35,7 @@
 		C9DF170A1F9318E600F368E6 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF17091F9318E600F368E6 /* InputView.swift */; };
 		C9DF170D1F933E5000F368E6 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF170C1F933E5000F368E6 /* RealmModel.swift */; };
 		C9DF170F1F93A7EA00F368E6 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF170E1F93A7EA00F368E6 /* Todo.swift */; };
-		C9DF17111F93A84A00F368E6 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF17101F93A84A00F368E6 /* Categories.swift */; };
+		C9DF17111F93A84A00F368E6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF17101F93A84A00F368E6 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +108,7 @@
 		C9DF17091F9318E600F368E6 /* InputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputView.swift; path = Scenes/Home/InputView.swift; sourceTree = "<group>"; };
 		C9DF170C1F933E5000F368E6 /* RealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmModel.swift; path = Manager/RealmModel.swift; sourceTree = "<group>"; };
 		C9DF170E1F93A7EA00F368E6 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Todo.swift; path = Objects/Todo.swift; sourceTree = "<group>"; };
-		C9DF17101F93A84A00F368E6 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categories.swift; path = Objects/Categories.swift; sourceTree = "<group>"; };
+		C9DF17101F93A84A00F368E6 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Objects/Category.swift; sourceTree = "<group>"; };
 		F8992D8E097AEED0C23904EC /* Pods_TodoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -239,9 +239,9 @@
 			isa = PBXGroup;
 			children = (
 				C9DF16E11F91C8B600F368E6 /* HomeViewController.swift */,
-				C9DF17071F9318C300F368E6 /* InputView.xib */,
-				C9DF17091F9318E600F368E6 /* InputView.swift */,
 				C9DF16E31F91C8D000F368E6 /* HomeViewController.storyboard */,
+				C9DF17091F9318E600F368E6 /* InputView.swift */,
+				C9DF17071F9318C300F368E6 /* InputView.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -286,7 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				C9DF170E1F93A7EA00F368E6 /* Todo.swift */,
-				C9DF17101F93A84A00F368E6 /* Categories.swift */,
+				C9DF17101F93A84A00F368E6 /* Category.swift */,
 			);
 			name = Object;
 			sourceTree = "<group>";
@@ -608,7 +608,7 @@
 				C9DF170A1F9318E600F368E6 /* InputView.swift in Sources */,
 				C9DF16A91F91C00D00F368E6 /* AppDelegate.swift in Sources */,
 				C9DF16E21F91C8B600F368E6 /* HomeViewController.swift in Sources */,
-				C9DF17111F93A84A00F368E6 /* Categories.swift in Sources */,
+				C9DF17111F93A84A00F368E6 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

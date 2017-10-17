@@ -16,11 +16,13 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1w-vL-5MD">
                     <rect key="frame" x="302" y="5" width="50" height="22"/>
-                    <color key="backgroundColor" red="1" green="0.61177154522998511" blue="0.90115697362163694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.99919222608024694" green="0.81242766203703709" blue="0.74112654320987659" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="Jkr-LD-ixt"/>
                     </constraints>
-                    <state key="normal" title="閉じる"/>
+                    <state key="normal" title="閉じる">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j2Q-FA-B68">
                     <rect key="frame" x="20" y="5" width="272" height="22"/>
@@ -32,7 +34,7 @@
                     </connections>
                 </textField>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.98524187380850903" blue="0.3699598451395838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="K1w-vL-5MD" secondAttribute="trailing" constant="10" id="9ex-GW-ZZQ"/>
                 <constraint firstItem="j2Q-FA-B68" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="Boa-7s-X8b"/>
